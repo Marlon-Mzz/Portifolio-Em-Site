@@ -1,0 +1,470 @@
+:root {
+    --background: #0b0b10;
+    --background-card: #151520;
+    --primary: #8b5cf6;
+    --secondary: #c4b5fd;
+    --text: #ffffff;
+    --text-secondary: #a1a1aa;
+    --border: #292936;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+.text-purple {
+    color: var(--primary);
+}
+
+/* MENU */
+
+.navbar {
+    background: rgba(11, 11, 16, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: var(--text);
+}
+
+.navbar-brand:hover {
+    color: var(--text);
+}
+
+.navbar .nav-link {
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: var(--primary);
+}
+
+.navbar-toggler {
+    border-color: var(--primary);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.3);
+}
+
+/* SEÇÃO INICIAL */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 130px 0 80px;
+    background:
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(139, 92, 246, 0.12),
+            transparent 45%
+        ),
+        var(--background);
+}
+
+.hero-intro {
+    color: var(--primary);
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 550px;
+    margin-bottom: 30px;
+}
+
+.profile-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--primary);
+    box-shadow: 0 0 45px rgba(139, 92, 246, 0.35);
+    transition: transform 0.4s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+/* BOTÕES */
+
+.btn-purple {
+    background-color: var(--primary);
+    color: #ffffff;
+    border: 1px solid var(--primary);
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-purple:hover,
+.btn-purple:focus {
+    background-color: #7c3aed;
+    border-color: #7c3aed;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+}
+
+.btn-outline-light {
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+/* SEÇÕES */
+
+.section {
+    padding: 100px 0;
+}
+
+.section:nth-of-type(even) {
+    background-color: #101018;
+}
+
+.section-title {
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.9;
+}
+
+/* HABILIDADES */
+
+.skill-card {
+    background: var(--background-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 35px 20px;
+    transition: all 0.3s ease;
+}
+
+.skill-card h3 {
+    color: var(--secondary);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.skill-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: 0 12px 30px rgba(139, 92, 246, 0.15);
+}
+
+/* PROJETOS */
+
+.project-card {
+    background: var(--background-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: 0 15px 35px rgba(139, 92, 246, 0.15);
+}
+
+.project-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.03);
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-content h3 {
+    color: var(--text);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.project-content p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.tech-tag {
+    display: inline-block;
+    background: rgba(139, 92, 246, 0.15);
+    color: var(--secondary);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* CONTATO */
+
+#contactForm {
+    background: var(--background-card);
+    padding: 35px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+}
+
+.form-label {
+    color: var(--text);
+    font-weight: 500;
+}
+
+.form-control {
+    background-color: #0f0f18;
+    color: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 15px;
+}
+
+.form-control::placeholder {
+    color: #858595;
+}
+
+.form-control:focus {
+    background-color: #0f0f18;
+    color: #ffffff;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+}
+
+/* RODAPÉ */
+
+.footer {
+    background-color: #08080c;
+    border-top: 1px solid var(--border);
+    padding: 30px 0;
+}
+
+.footer p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 991.98px) {
+
+    .navbar .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .hero {
+        text-align: center;
+        padding-top: 150px;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero .d-flex {
+        justify-content: center;
+    }
+
+    .profile-img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .section {
+        padding: 75px 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .profile-img {
+        width: 210px;
+        height: 210px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .skill-card {
+        padding: 25px 20px;
+    }
+
+    #contactForm {
+        padding: 22px;
+    }
+
+    .project-img {
+        height: 200px;
+    }
+}
+
+/* ACESSIBILIDADE */
+
+:focus-visible {
+    outline: 2px solid var(--secondary);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+
+/* EFEITO DE DIGITAÇÃO */
+
+.hero h2 {
+    min-height: 2.5rem;
+    color: var(--secondary);
+}
+
+/* BOTÃO VOLTAR AO TOPO */
+
+.btn-topo {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: var(--primary);
+    color: white;
+
+    border: none;
+    border-radius: 50%;
+
+    font-size: 26px;
+    font-weight: bold;
+
+    cursor: pointer;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+
+    transition: all 0.3s ease;
+}
+
+.btn-topo.mostrar {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.btn-topo:hover {
+    background-color: #7c3aed;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+}
+
+.btn-topo:focus-visible {
+    outline: 2px solid var(--secondary);
+    outline-offset: 4px;
+}
+
+/* MENSAGEM DO FORMULÁRIO */
+
+#formFeedback {
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 575.98px) {
+
+    .btn-topo {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .hero h2 {
+        min-height: 3rem;
+    }
+}
+
